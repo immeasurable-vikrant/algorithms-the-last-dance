@@ -24,19 +24,43 @@ Tree Method: In recursion, the tree method visualizes the recursive calls as a
 Stack Method: Recursion uses the call stack to manage function calls, pushing information
     onto the stack when a function is called and popping it off when the function returns.
 """
-def descending_order(n):
-    if(n <= 0):
-        return
-    print(n)
-    descending_order(n - 1)
 
-descending_order(5)
+
+
+
+
+# Problem 1:
+"""
+    Prints numbers in descending order from n to 1.
+    
+    Parameters: n (int): Starting number
+    
+    Returns: None
+"""
+
+def descending_order(n):
+    if(n <= 0):  # Base case: Stop recursion when n is less than or equal to 0
+        return
+    print(n)  # Print the current number
+    descending_order(n - 1)  # Recursively call descending_order with n - 1
+
+descending_order(5)  # Test with input 5
+
+
+"""
+    Prints numbers in ascending order from 1 to n.
+
+    Parameters: n (int): Ending number
+
+    Returns: None
+"""
 
 
 def ascending_order(n):
-    if(n <= 0):
-        return
-    ascending_order(n - 1)
-    print(n)
 
-ascending_order(5)
+    if(n <= 0):  # Base case: Stop recursion when n is less than or equal to 0
+        return
+    ascending_order(n - 1)  # Recursively call ascending_order with n - 1
+    print(n)  # Print the current number
+
+ascending_order(5)  # Test with input 5
